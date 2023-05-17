@@ -2,6 +2,9 @@ body
 {
     margin: 0;
 }
+.addedToCart{
+    left: 10px;
+}
 #badge
 {
     position: absolute;
@@ -130,11 +133,25 @@ body
     {
         width: 20em;
     }
+
+}
+@media(min-width: 1090px)
+{
+    #collection
+    {
+        font-size: 13px;
+    }
+    #input 
+    {
+        width: 20em;
+    }
     .addedToCart
     {
-        font-size: 1.5em;
-        margin: 10px 20px;
+        position: relative;
+        /* left: 75px; */
+        right: 1000px;
     }
+    
 }
 
 @media(max-width: 1090px)
@@ -163,11 +180,7 @@ body
     {
         font-size: 35px;
     }
-    .addedToCart
-    {
-        font-size: 1.2em;
-        margin: 10px 20px;
-    }
+
 }
 
 @media(max-width: 650px)
@@ -302,5 +315,10 @@ body
     {
         right: 62px;
         top: 18px;
+    }
+    .addedToCart
+    {
+        position: relative;
+        left: -41px;
     }
 }
