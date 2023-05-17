@@ -42,6 +42,25 @@ function dynamicClothingSection(ob) {
   return boxDiv;
 }
 
+function toggleSection(sectionId) {
+  var section = document.getElementById(sectionId);
+  if (section.style.display === "none") {
+      section.style.display = "block";
+  } else {
+      section.style.display = "none";
+  }
+}
+
+function toggleClothingSection() {
+  var clothingSection = document.getElementById("clothingSection");
+  clothingSection.style.display = clothingSection.style.display === "none" ? "block" : "none";
+}
+
+function toggleAccessoriesSection() {
+  var accessoriesSection = document.getElementById("accessoriesSection");
+  accessoriesSection.style.display = accessoriesSection.style.display === "none" ? "block" : "none";
+}    
+
 //  TO SHOW THE RENDERED CODE IN CONSOLE
 // console.log(dynamicClothingSection());
 
