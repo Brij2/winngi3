@@ -4,6 +4,9 @@ fetch('brands.json')
   .then(response => response.json())
   .then(data => {
     data.brands.forEach(brand => {
+      const brandCard = document.createElement('span');
+      brandCard.className = 'brand-card';
+
       const brandLink = document.createElement('a');
       brandLink.href = brand.link;
       brandLink.target = '_blank';
@@ -13,8 +16,14 @@ fetch('brands.json')
       brandImage.alt = brand.name;
       brandImage.className = 'brand-image';
 
+      const brandName = document.createElement('span');
+      brandName.textContent = brand.name;
+      brandName.className = 'brand-name';
+
       brandLink.appendChild(brandImage);
-      brandsContainer.appendChild(brandLink);
+      brandCard.appendChild(brandLink);
+      brandCard.appendChild(brandName);
+      brandsContainer.appendChild(brandCard);
     });
   })
   .catch(error => {
