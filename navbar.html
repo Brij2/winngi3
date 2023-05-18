@@ -12,51 +12,155 @@
     <script src="https://kit.fontawesome.com/4a3b1f73a2.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="navbar.css">
+    <style>
+        .subclass.show {
+          display: block;
+        }
+      </style>
 </head>
 <body>
     <section>
         <nav>
             <ul class="navbar">
+                <script>
+                    const tShirtsLink = document.querySelector('.nav-item > .dropdown > li > a');
+                    const tShirtsSubclass = document.querySelector('.nav-item > .dropdown > li > .subclass');
+                  
+                    tShirtsLink.addEventListener('mouseenter', () => {
+                      tShirtsSubclass.classList.add('show');
+                    });
+                  
+                    tShirtsLink.addEventListener('mouseleave', () => {
+                      tShirtsSubclass.classList.remove('show');
+                    });
+                  </script>
                 <li class="nav-item">
                     <a href="#">Men's Clothing</a>
                     <ul class="dropdown">
-                        <li><a href="#">T-Shirts</a></li>
-                        <li><a href="#">Shirts</a></li>
-                        <li><a href="#">Jeans</a></li>
+                      <li>
+                        <a href="#">T-Shirts</a>
+                        <ul class="dropdown">
+                          <li><a href="#">Dresses</a></li>
+                          <li><a href="#">Tops</a></li>
+                          <li><a href="#">Skirts</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Shirts</a></li>
+                      <li><a href="#">Jeans</a></li>
                     </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Women's Clothing</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Dresses</a></li>
-                        <li><a href="#">Tops</a></li>
-                        <li><a href="#">Skirts</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Accessories</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Bags</a></li>
-                        <li><a href="#">Watches</a></li>
-                        <li><a href="#">Jewelry</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Shoes</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Sneakers</a></li>
-                        <li><a href="#">Boots</a></li>
-                        <li><a href="#">Sandals</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Contact</a>
-                </li>
+                  </li>
+              <li class="nav-item">
+                <a href="#">Women's Clothing</a>
+                <ul class="dropdown">
+                  <li><a href="#">Dresses</a></li>
+                  <li><a href="#">Tops</a></li>
+                  <li><a href="#">Skirts</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">Accessories</a>
+                <ul class="dropdown">
+                  <li><a href="#">Bags</a></li>
+                  <li><a href="#">Watches</a></li>
+                  <li><a href="#">Jewelry</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">Shoes</a>
+                <ul class="dropdown">
+                  <li><a href="#">Sneakers</a></li>
+                  <li><a href="#">Boots</a></li>
+                  <li><a href="#">Sandals</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Gallery Locations</a>
+                <ul class="dropdown">
+                  <li><a href="#">Adelaide SA</a></li>
+                  <li><a href="#">Ashgrove QLD</a></li>
+                  <li><a href="#">Batemans Bay NSW</a></li>
+                  <li><a href="#">Bega NSW</a></li>
+                  <li><a href="#">Bendigo VIC</a></li>
+                  <li><a href="#">Burleigh Heads QLD</a></li>
+                  <li><a href="#">Cairns QLD</a></li>
+                  <li><a href="#">Camberwell VIC</a></li>
+                  <li><a href="#">Camperdown NSW</a></li>
+                  <li><a href="#">Clayfield QLD</a></li>
+                  <li><a href="#">Coffs Harbour NSW</a></li>
+                  <li><a href="#">Colac VIC</a></li>
+                  <li><a href="#">Gladstone QLD</a></li>
+                  <li><a href="#">Heidelberg VIC</a></li>
+                  <li><a href="#">Hobart TAS</a></li>
+                  <li><a href="#">Maroochydore QLD</a></li>
+                  <li><a href="#">Mittagong NSW</a></li>
+                  <li><a href="#">Newmarket QLD</a></li>
+                  <li><a href="#">Orange NSW</a></li>
+                  <li><a href="#">Rockhampton QLD</a></li>
+                  <li><a href="#">Stones Corner QLD</a></li>
+                  <li><a href="#">Toowoomba QLD</a></li>
+                  <li><a href="#">Townsville QLD</a></li>
+                  <li><a href="#">Wagga Wagga NSW</a></li>
+                  <li><a href="#">Wantirna South VIC</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">Popular Categories</a>
+                <ul class="dropdown">
+                  <li><a href="#">Ovens</a></li>
+                  <li><a href="#">Cooktops</a></li>
+                  <li><a href="#">Dishwashers</a></li>
+                  <li><a href="#">Fridges</a></li>
+                  <li><a href="#">Rangehoods</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">Company</a>
+                <ul class="dropdown">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Company Information</a></li>
+                  <li><a href="#">Partners</a></li>
+                  <li><a href="#">Buying Power</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">FAQs</a></li>
+                  <li><a href="#">Commercial & Trade</a></li>
+                  <li><a href="#">Insiders Club</a></li>
+                  <li><a href="#">Find a Gallery</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Modern Slavery Policy</a></li>
+                  <li><a href="#">Ideas & Inspiration</a></li>
+                  <li><a href="#">National Product Review</a></li>
+                  <li><a href="#">Scam Alerts</a></li>
+                  <li><a href="#">COVID Updates</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="#">Shopping</a>
+                <ul class="dropdown">
+                  <li><a href="#">My Account</a></li>
+                  <li><a href="#">Payment Options</a></li>
+                  <li><a href="#">Delivery Information</a></li>
+                  <li><a href="#">Free Delivery</a></li>
+                  <li><a href="#">Returns</a></li>
+                  <li><a href="#">Price Match Enquiry</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Back Up Plan</a></li>
+                  <li><a href="#">Terms of Order Placement</a></li>
+                  <li><a href="#">Terms & Conditions</a></li>
+                  <li><a href="#">Gift Card Terms of Use</a></li>
+                  <li><a href="#">Afterpay</a></li>
+                  <li><a href="#">Humm</a></li>
+                  <li><a href="#">Zip - Own it now, pay later</a></li>
+                </ul>
+              </li>
             </ul>
-        </nav>
+          </nav>
+          
         
     </section>    
 </body>

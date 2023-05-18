@@ -22,7 +22,7 @@
     <!-- HEADER -->
     <span id="1"></span>
     <script>
-        load("header.html");
+        load("./header.html");
         function load(url)
         {
             req = new XMLHttpRequest();
@@ -35,7 +35,7 @@
     <!-- Navbar -->
     <div id="5"></div>
     <script>
-        load("navbar.html");
+        load("./navbar.html");
         function load(url)
         {
             req = new XMLHttpRequest();
@@ -46,7 +46,7 @@
     </script>
 
     <!-- SLIDER -->
-    <span id="2"></span>
+    <!-- <span id="2"></span>
     <script>
         load("slider.html");
         function load(url)
@@ -56,12 +56,12 @@
             req.send(null);
             document.getElementById(2).innerHTML = req.responseText;
         }
-    </script>
+    </script> -->
 
     <!-- CONTENT SECTION -->
     <div id="3"></div>
     <script>
-        load("./highLevelContent.html");
+        load("./content.html");
         function load(url)
         {
             req = new XMLHttpRequest();
@@ -74,7 +74,7 @@
     <!-- FOOTER -->
     <div id="4"></div>
     <script>
-        load("footer.html");
+        load("./footer.html");
         function load(url)
         {
             req = new XMLHttpRequest();
@@ -86,24 +86,7 @@
 
 </body>
 
-<!-- slider JS START -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-<script>
-    $(document).ready(function()
-    {
-    $('#containerSlider').slick({
-        dots: true,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        });
-    });
-</script>
-<!-- slider JS ENDS -->
-
 <!-- content JS -->
-<script src="./highLevelContent.js"></script>
+<script src="./content.js"></script>
 
 </html>
