@@ -1,0 +1,112 @@
+{
+    "brands": [
+        {
+            "id": 1,
+            "image": "apple.png",
+            "name": "Apple",
+            "link": "https://www.apple.com/au/"
+        },
+        {
+            "id": 2,
+            "image": "samsung.png",
+            "name": "Samsung",
+            "link": "https://www.samsung.com/au/"
+        },
+        {
+            "id": 3,
+            "image": "sony.png",
+            "name": "Sony",
+            "link": "https://www.sony.com.au/"
+        },
+        {
+            "id": 4,
+            "image": "lg.png",
+            "name": "LG",
+            "link": "https://www.lg.com/au/"
+        },
+        {
+            "id": 5,
+            "image": "panasonic.png",
+            "name": "Panasonic",
+            "link": "https://www.panasonic.com/au/"
+        },
+        {
+            "id": 6,
+            "image": "toshiba.png",
+            "name": "Toshiba",
+            "link": "https://www.toshiba.com/au/"
+        },
+        {
+            "id": 7,
+            "image": "philips.png",
+            "name": "Philips",
+            "link": "https://www.philips.com.au/"
+        },
+        {
+            "id": 8,
+            "image": "hp.png",
+            "name": "HP",
+            "link": "https://www.hp.com/au-en/"
+        },
+        {
+            "id": 9,
+            "image": "dell.png",
+            "name": "Dell",
+            "link": "https://www.dell.com/au/"
+        },
+        {
+            "id": 10,
+            "image": "lenovo.png",
+            "name": "Lenovo",
+            "link": "https://www.lenovo.com/au/en/"
+        },
+        {
+            "id": 11,
+            "image": "asus.png",
+            "name": "Asus",
+            "link": "https://www.asus.com/au/"
+        },
+        {
+            "id": 12,
+            "image": "acer.png",
+            "name": "Acer",
+            "link": "https://www.acer.com/ac/en/AU/content/home"
+        },
+        {
+            "id": 13,
+            "image": "microsoft.png",
+            "name": "Microsoft",
+            "link": "https://www.microsoft.com/en-au/"
+        },
+        {
+            "id": 14,
+            "image": "gopro.png",
+            "name": "GoPro",
+            "link": "https://gopro.com/au/"
+        },
+        {
+            "id": 15,
+            "image": "canon.png",
+            "name": "Canon",
+            "link": "https://www.canon.com.au/"
+        },
+        {
+            "id": 16,
+            "image": "brand9.jpg",
+            "name": "Brand 9",
+            "link": "https://www.brand9.com"
+        },
+        {
+            "id": 17,
+            "image": "brand10.jpg",
+            "name": "Brand 10",
+            "link": "https://www.brand10.com"
+        },
+        {
+            "id": 18,
+            "image": "brand11.jpg",
+            "name": "Brand 11",
+            "link": "https://www.brand11"
+        }
+    ]
+}
