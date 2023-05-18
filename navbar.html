@@ -22,37 +22,43 @@
     <section>
         <nav>
             <ul class="navbar">
-                <script>
-                    const tShirtsLink = document.querySelector('.nav-item > .dropdown > li > a');
-                    const tShirtsSubclass = document.querySelector('.nav-item > .dropdown > li > .subclass');
-                  
-                    tShirtsLink.addEventListener('mouseenter', () => {
-                      tShirtsSubclass.classList.add('show');
-                    });
-                  
-                    tShirtsLink.addEventListener('mouseleave', () => {
-                      tShirtsSubclass.classList.remove('show');
-                    });
-                  </script>
                 <li class="nav-item">
                     <a href="#">Men's Clothing</a>
                     <ul class="dropdown">
                       <li>
                         <a href="#">T-Shirts</a>
-                        <ul class="dropdown">
+                        <ul class="dropdon">
                           <li><a href="#">Dresses</a></li>
                           <li><a href="#">Tops</a></li>
                           <li><a href="#">Skirts</a></li>
                         </ul>
                       </li>
-                      <li><a href="#">Shirts</a></li>
+                      <li><a href="#">Shirts</a>
+                        <ul class="dropdon">
+                            <li><a href="#">Dresses</a>
+                                <ul class="dropdn">
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Skirts</a></li>
+                                  </ul>
+                            </li>
+                            <li><a href="#">Tops</a></li>
+                            <li><a href="#">Skirts</a></li>
+                          </ul>
+                    </li>
                       <li><a href="#">Jeans</a></li>
                     </ul>
                   </li>
               <li class="nav-item">
                 <a href="#">Women's Clothing</a>
                 <ul class="dropdown">
-                  <li><a href="#">Dresses</a></li>
+                  <li><a href="#">Dresses</a>
+                    <ul class="dropdon">
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Tops</a></li>
+                        <li><a href="#">Skirts</a></li>
+                      </ul>    
+                </li>
                   <li><a href="#">Tops</a></li>
                   <li><a href="#">Skirts</a></li>
                 </ul>
