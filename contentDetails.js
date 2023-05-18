@@ -11,24 +11,24 @@ if(document.cookie.indexOf(',counter=')>=0)
 
 function dynamicContentDetails(ob)
 {
-    let mainContainer = document.createElement('div')
+    let mainContainer = document.createElement('span')
     mainContainer.id = 'containerD'
     document.getElementById('containerProduct').appendChild(mainContainer);
 
-    let imageSectionDiv = document.createElement('div')
-    imageSectionDiv.id = 'imageSection'
+    let imageSectionspan = document.createElement('span')
+    imageSectionspan.id = 'imageSection'
 
     let imgTag = document.createElement('img')
      imgTag.id = 'imgDetails'
      //imgTag.id = ob.photos
      imgTag.src = ob.preview
 
-    imageSectionDiv.appendChild(imgTag)
+    imageSectionspan.appendChild(imgTag)
 
-    let productDetailsDiv = document.createElement('div')
-    productDetailsDiv.id = 'productDetails'
+    let productDetailsspan = document.createElement('span')
+    productDetailsspan.id = 'productDetails'
 
-    // console.log(productDetailsDiv);
+    // console.log(productDetailsspan);
 
     let h1 = document.createElement('h1')
     let h1Text = document.createTextNode(ob.name)
@@ -39,12 +39,12 @@ function dynamicContentDetails(ob)
     h4.appendChild(h4Text)
     console.log(h4);
 
-    let detailsDiv = document.createElement('div')
-    detailsDiv.id = 'details'
+    let detailsspan = document.createElement('span')
+    detailsspan.id = 'details'
 
-    let h3DetailsDiv = document.createElement('h3')
+    let h3Detailsspan = document.createElement('h3')
     let h3DetailsText = document.createTextNode('Rs ' + ob.price)
-    h3DetailsDiv.appendChild(h3DetailsText)
+    h3Detailsspan.appendChild(h3DetailsText)
 
     let h3 = document.createElement('h3')
     let h3Text = document.createTextNode('Description')
@@ -54,35 +54,35 @@ function dynamicContentDetails(ob)
     let paraText = document.createTextNode(ob.description)
     para.appendChild(paraText)
 
-    let productPreviewDiv = document.createElement('div')
-    productPreviewDiv.id = 'productPreview'
+    let productPreviewspan = document.createElement('span')
+    productPreviewspan.id = 'productPreview'
 
-    let h3ProductPreviewDiv = document.createElement('h3')
+    let h3ProductPreviewspan = document.createElement('h3')
     let h3ProductPreviewText = document.createTextNode('Product Preview')
-    h3ProductPreviewDiv.appendChild(h3ProductPreviewText)
-    productPreviewDiv.appendChild(h3ProductPreviewDiv)
+    h3ProductPreviewspan.appendChild(h3ProductPreviewText)
+    productPreviewspan.appendChild(h3ProductPreviewspan)
 
     let i;
     for(i=0; i<ob.photos.length; i++)
     {
-        let imgTagProductPreviewDiv = document.createElement('img')
-        imgTagProductPreviewDiv.id = 'previewImg'
-        imgTagProductPreviewDiv.src = ob.photos[i]
-        imgTagProductPreviewDiv.onclick = function(event)
+        let imgTagProductPreviewspan = document.createElement('img')
+        imgTagProductPreviewspan.id = 'previewImg'
+        imgTagProductPreviewspan.src = ob.photos[i]
+        imgTagProductPreviewspan.onclick = function(event)
         {
             console.log("clicked" + this.src)
             imgTag.src = ob.photos[i]
             document.getElementById("imgDetails").src = this.src 
             
         }
-        productPreviewDiv.appendChild(imgTagProductPreviewDiv)
+        productPreviewspan.appendChild(imgTagProductPreviewspan)
     }
 
-    let buttonDiv = document.createElement('div')
-    buttonDiv.id = 'button'
+    let buttonspan = document.createElement('span')
+    buttonspan.id = 'button'
 
     let buttonTag = document.createElement('button')
-    buttonDiv.appendChild(buttonTag)
+    buttonspan.appendChild(buttonTag)
 
     buttonText = document.createTextNode('Add to Cart')
     buttonTag.onclick  =   function()
@@ -101,19 +101,19 @@ function dynamicContentDetails(ob)
     buttonTag.appendChild(buttonText)
 
 
-    console.log(mainContainer.appendChild(imageSectionDiv));
-    mainContainer.appendChild(imageSectionDiv)
-    mainContainer.appendChild(productDetailsDiv)
-    productDetailsDiv.appendChild(h1)
-    productDetailsDiv.appendChild(h4)
-    productDetailsDiv.appendChild(detailsDiv)
-    detailsDiv.appendChild(h3DetailsDiv)
-    detailsDiv.appendChild(h3)
-    detailsDiv.appendChild(para)
-    productDetailsDiv.appendChild(productPreviewDiv)
+    console.log(mainContainer.appendChild(imageSectionspan));
+    mainContainer.appendChild(imageSectionspan)
+    mainContainer.appendChild(productDetailsspan)
+    productDetailsspan.appendChild(h1)
+    productDetailsspan.appendChild(h4)
+    productDetailsspan.appendChild(detailsspan)
+    detailsspan.appendChild(h3Detailsspan)
+    detailsspan.appendChild(h3)
+    detailsspan.appendChild(para)
+    productDetailsspan.appendChild(productPreviewspan)
     
     
-    productDetailsDiv.appendChild(buttonDiv)
+    productDetailsspan.appendChild(buttonspan)
 
 
     return mainContainer
