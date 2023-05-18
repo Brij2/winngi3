@@ -4,8 +4,8 @@ let contentTitle;
 
 console.log(document.cookie);
 function dynamicClothingSection(ob) {
-  let boxDiv = document.createElement("div");
-  boxDiv.id = "box";
+  let boxspan = document.createElement("span");
+  boxspan.id = "box";
 
   let boxLink = document.createElement("a");
   // boxLink.href = '#'
@@ -17,8 +17,8 @@ function dynamicClothingSection(ob) {
   // imgTag.id = ob.photos
   imgTag.src = ob.preview;
 
-  let detailsDiv = document.createElement("div");
-  detailsDiv.id = "details";
+  let detailsspan = document.createElement("span");
+  detailsspan.id = "details";
 
   let h3 = document.createElement("h3");
   let h3Text = document.createTextNode(ob.name);
@@ -32,20 +32,20 @@ function dynamicClothingSection(ob) {
   let h2Text = document.createTextNode("rs  " + ob.price);
   h2.appendChild(h2Text);
 
-  boxDiv.appendChild(boxLink);
+  boxspan.appendChild(boxLink);
   boxLink.appendChild(imgTag);
-  boxLink.appendChild(detailsDiv);
-  detailsDiv.appendChild(h3);
-  detailsDiv.appendChild(h4);
-  detailsDiv.appendChild(h2);
+  boxLink.appendChild(detailsspan);
+  detailsspan.appendChild(h3);
+  detailsspan.appendChild(h4);
+  detailsspan.appendChild(h2);
 
-  return boxDiv;
+  return boxspan;
 }
 
 //  TO SHOW THE RENDERED CODE IN CONSOLE
 // console.log(dynamicClothingSection());
 
-// console.log(boxDiv)
+// console.log(boxspan)
 
 let mainContainer = document.getElementById("mainContainer");
 let containerClothing = document.getElementById("containerClothing");
