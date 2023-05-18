@@ -6,6 +6,8 @@ fetch('brands.json')
     data.brands.forEach(brand => {
       const brandCard = document.createElement('span');
       brandCard.className = 'brand-card';
+      brandCard.style.display = "inline-block";
+      brandCard.style.width ="150px" ;
 
       const brandLink = document.createElement('a');
       brandLink.href = brand.link;
@@ -16,7 +18,7 @@ fetch('brands.json')
       brandImage.alt = brand.name;
       brandImage.className = 'brand-image';
 
-      const brandName = document.createElement('span');
+      const brandName = document.createElement('p');
       brandName.textContent = brand.name;
       brandName.className = 'brand-name';
 
