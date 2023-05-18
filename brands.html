@@ -8,8 +8,8 @@
 
 <style>
     .brand-card-container {
-        display: inline-block;
-        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
     }
 
@@ -54,6 +54,8 @@
     @media screen and (max-width: 800px) {
         .brand-card-container {
             justify-content: flex-start;
+            flex-wrap: wrap;
+            flex-direction: row;
         }
 
         .brand-card {
@@ -71,8 +73,7 @@
 <body>
   <section id="brands-container">
     <h2>Featured Brands</h2>
-    <span class="brand-card-container" style="max-width: 200px; display:grid">
-
+    <span class="brand-card-container">
     </span>
   </section>
 
