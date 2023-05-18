@@ -122,26 +122,28 @@ function dynamicContentDetails(ob)
 
 
 // BACKEND CALLING
+let httpRequest = new XMLHttpRequest();
 
-let httpRequest = new XMLHttpRequest()
-{
-    httpRequest.onreadystatechange = function()
-    {
-        if(this.readyState === 4 && this.status == 200)
-        {
-            console.log('connected!!');
-            let contentDetails = JSON.parse(this.responseText)
-            {
-                console.log(contentDetails);
-                dynamicContentDetails(contentDetails)
-            }
+httpRequest.onreadystatechange = function() {
+  if (this.readyState === 4) {
+    if (this.status == 200) {
+      console.log('connected!!');
+      let contentDetails = JSON.parse(this.responseText);
+      console.log(contentDetails);
+        let content;
+      for (let i = 0; i < contentDetails.length; i++) {
+        if (contentDetails[i].id == id) {
+          content = contentDetails[i];
+          break;
         }
-        else
-        {
-            console.log('not connected!');
-        }
+      }
+
+      dynamicContentDetails(content);
+    } else {
+      console.log('not connected!');
     }
-}
+  }
+};
 
-httpRequest.open('GET', 'https://5d76bf96515d1a0014085cf9.mockapi.io/product/'+id, true)
-httpRequest.send()  
+httpRequest.open('GET', 'data.json', true);
+httpRequest.send();
